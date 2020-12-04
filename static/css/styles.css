@@ -1,5 +1,6 @@
 body{
 	background-color: orange;
+	justify-content: center;
 }
 .jumbotron{
     background: url("https://wallpaperstock.net/pokemon-characters-wallpapers_34435_852x480.jpg");
