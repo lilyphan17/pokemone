@@ -1,0 +1,25 @@
+.audio-player,
+.audio-player div,
+.audio-player h1,
+.audio-player a,
+.audio-player img,
+.audio-player span,
+.audio-player button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+div.audio-player {
+    position: relative;
+    width: 400px;
+    margin-left: 400px;
+    margin-top: 5px;
+}
+
+
+ 
+
+ 
+

@@ -16,6 +16,7 @@ h1{
 	border: 3px solid yellow;
 	color: orangered;
 	margin-top: 10px;
+	text-align: center;
 }
 h2, h3{
 	color: darkred;
@@ -41,5 +42,6 @@ h4, li{
 .lead{
 	font-weight: 500;
 	color: firebrick;
-	text-align: left;
+	text-align: center;
+	font-size: 15px;
 }
