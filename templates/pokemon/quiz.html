@@ -1,9 +1,53 @@
 {% extends 'pokemon/home.html' %}
 {% load static %}
-    {% block title %}
+
+{% block title %}
     <title>Quiz</title>
+{% endblock %}
+{% block script %}
+{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
 {% endblock %}
 
 {% block body %}
-    <h1>Quiz</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <img id="logo" src="{% static 'images/who.png' %}" alt="who">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <img id="pic" style="filter: contrast(0)" src="{% static 'images/1.png' %}"
+                     alt="dark picture" width="400"
+                     height="400"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <p id="hscore">High Score: <span id="hs">{{ Score.highscore }}</span></p>
+                <p id="correct">Correct!</p>
+                <p id="incorrect">Incorrect!</p>
+
+                <p id="score">Score: <span id="s"></span></p>
+
+                <form id="fo" style="display: unset" method="POST">
+                    <div class="form-group" style="text-align: center">
+                        <input class="form-control" id="answer" type="text" placeholder="Who's that Pokemon!?" name="answer" aria-describedby="tip">
+                        <small id="tip" class="form-text" >Type your answer in lowercase</small>
+                    </div>
+                </form>
+
+                <button class="btn btn-success" id="sub" value="Submit">Submit</button>
+                <button class="btn btn-success" id="start">Start Quiz</button>
+                <button class="btn btn-success" id="reload">Play Again!</button>
+                <button class="btn btn-danger" id="retry">Try Again!</button>
+
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

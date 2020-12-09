@@ -1,0 +1,41 @@
+{% extends 'pokemon/dreamTeam.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Update</title>
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/team.css' %}"/>
+{% endblock %}
+
+{% block body %}
+    <div class="container outter">
+        <div class="card">
+            <div class="card-header" style="text-align: left">Update Team</div>
+            <div class="card-body" style="text-align: left">
+                <div class="container inner">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row" id="update">
+                            <div class="col-md">
+                                {{ form|crispy }}
+                            </div>
+                        </div>
+                        <a href="/pokemon/dreamTeam" class="btn btn-info"><- Go back</a>
+                        <input type="submit" value="Update" href="/pokemon/dreamTeam" class="btn btn-primary">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!--
+    <h1>Team Form</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Update">
+    </form>
+-->

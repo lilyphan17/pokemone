@@ -1,0 +1,63 @@
+body {
+    background-color: orange;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.card {
+    text-align: center;
+    background-color: indianred;
+    color: yellow;
+    border: pink 3px inset;
+    margin: 40px;
+}
+
+.top {
+    background-color: cornflowerblue;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h4 {
+    color: darkred;
+    margin-top: 3px;
+}
+
+label {
+    color: aqua;
+}
+.form-group {
+    text-align: center;
+}
+
+input[type=text] {
+    border: 2px solid #6FA7E4;
+    background-color: yellow;
+    border-radius: 4px;
+    color: crimson;
+    transition: width 0.4s ease-in-out;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text]:focus {
+    border: 5px solid blue;
+    background-color: yellow;
+    width: 55%
+}
+
+.create {
+    background-color: mediumpurple;
+    border: 3px black dotted;
+    padding: 20px;
+}

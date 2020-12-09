@@ -1,0 +1,28 @@
+{% extends 'pokemon/dreamTeam.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Update</title>
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/team.css' %}"/>
+{% endblock %}
+
+{% block body %}
+    <div class="container outter">
+        <div class="card">
+            <div class="card-header" style="text-align: left">Delete Team</div>
+            <div class="card-body" style="text-align: left">
+                <p class="card-text font-weight-bold">Are you sure you want to delete <span
+                        id="delete">{{ team.teamName }}</span>?</p>
+                <form action="{{ team.id }}" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <a href="/pokemon/dreamTeam" class="btn btn-info">No, go back</a>
+                    <input type="submit" class="btn btn-danger" value="Yes, delete">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

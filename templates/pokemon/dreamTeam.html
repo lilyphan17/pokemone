@@ -1,9 +1,92 @@
 {% extends 'pokemon/home.html' %}
 {% load static %}
-    {% block title %}
+{% load crispy_forms_tags %}
+
+{% block title %}
     <title>Dream Team</title>
 {% endblock %}
 
-{% block body %}
-    <h1>Dream Team</h1>
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
 {% endblock %}
+
+{% block body %}
+    <img src="{% static 'images/dreamteam.png' %}" alt="dream team">
+
+    <div class="container outter">
+        <div class="row">
+            <div class="col-md">
+                <h4>Write your name, team name, and six Pokémons of your choice</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md create">
+                <form action="{% url 'add' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input class="btn btn-success" type="submit" value="Create new team">
+                </form>
+            </div>
+        </div>
+
+        {% for team in teams %}
+            <div class="card">
+                <div class="car-header top">{{ team.name }}'s team: {{ team.teamName }}</div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md">
+                                <p>{{ team.pick1 }}</p>
+                                <p>{{ team.pick4 }}</p>
+                            </div>
+
+                            <div class="col-md">
+                                <p>{{ team.pick2 }}</p>
+                                <p>{{ team.pick5 }}</p>
+                            </div>
+
+                            <div class="col-md">
+                                <p>{{ team.pick3 }}</p>
+                                <p>{{ team.pick6 }}</p>
+                            </div>
+
+                            <div class="col-md">
+                                <a href="{% url 'update_team' team.id %}">
+                                    <button class="btn btn-primary">Update</button>
+                                </a>
+                                <a href="{% url 'delete_team' team.id %}">
+                                    <button class="btn btn-danger">Delete</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+<!--
+    <div class="row">
+        <div class="col-md">
+            <p>{{ team.name }}</p>
+            <p>{{ team.teamName }}</p>
+            <p>{{ team.pick1 }}</p>
+            <p>{{ team.pick2 }}</p>
+            <p>{{ team.pick3 }}</p>
+            <p>{{ team.pick4 }}</p>
+            <p>{{ team.pick5 }}</p>
+            <p>{{ team.pick6 }}</p>
+            <p>{{ team.created_at }}</p>
+        </div>
+        <div class="col-md">
+            <a href="{% url 'update_team' team.id %}">
+                <button class="btn btn-primary">Update</button>
+            </a>
+            <a href="{% url 'delete_team' team.id %}">
+                <button class="btn btn-danger">Delete</button>
+            </a>
+        </div>
+    </div>
+-->

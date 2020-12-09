@@ -1,0 +1,83 @@
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: fantasy, fantasy;
+    color: gold;
+    background: coral;
+    border: 5px dotted blue;
+    padding: 2px;
+}
+
+small, li{
+    color: indianred;
+    text-align: center;
+    margin-left: 20px;
+}
+
+input[type=text],
+input[type=password], textarea{
+    background-color: yellow;
+    border: 2px solid #6FA7E4;
+    border-radius: 4px;
+    color: crimson;
+    transition: width 0.4s ease-in-out;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus{
+    background-color: yellow;
+    border: 5px solid blue;
+    width:35%
+}
+
+
+div {
+    text-align: center;
+}
+
+.btn {
+    color: yellow;
+    font-family: arial, sans-serif;
+}
+
+label {
+    color: darkred;
+    font-family: Arial, fantasy;
+    font-size: 25px;
+}
+
+body {
+    background: orange;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+
+img {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    margin-bottom: 10px;
+}
+#thanks, #cute{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h4{
+    color:red;
+    text-align: center;
+}
+
+p{
+    color: orangered;
+    text-align: center;
+}

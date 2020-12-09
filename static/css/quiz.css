@@ -1,0 +1,66 @@
+body {
+    background-image: url("https://external-preview.redd.it/e5zoQw-hgw-LCjdhC_4G8IAcHxex5pzda_BD_FPTcBY.png?auto=webp&s=c0b96b5ec20010a15864b8a0c9b202c119e52fe8");
+    background-color: orange;
+    text-align: center;
+}
+
+#correct, #incorrect {
+    font-size: 2em;
+}
+#correct{
+    color: green;
+}
+
+#incorrect{
+    color:red;
+}
+
+.container {
+    margin-top: 120px;
+}
+
+.form-control {
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+}
+
+#logo{
+        width: 100%;
+    }
+
+@media all and (max-width: 767px){
+    #logo{
+        width: 80%;
+    }
+}
+
+input[type=text]{
+    background-color: yellow;
+    border: 2px solid #6FA7E4;
+    border-radius: 4px;
+    color: crimson;
+    transition: width 0.4s ease-in-out;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+input[type=text]:focus{
+    background-color: yellow;
+    border: 5px solid blue;
+    width:35%
+}
+
+.btn{
+    color:yellow;
+}
+
+small{
+    color:indianred;
+}
+
+p{
+    color: darkcyan;
+}
